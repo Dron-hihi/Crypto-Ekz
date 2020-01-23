@@ -1,0 +1,13 @@
+button {
+    background-color:darkgrey; 
+    color: black; 
+    border: 3px solid #4CAF50;
+}
+  
+  button:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  tr{
+      border: 2px solid darkgreen;
+  }

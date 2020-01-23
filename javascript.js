@@ -33,45 +33,37 @@ function drawInfo(data) {
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
         td.innerHTML = k;
         tr.appendChild(td);
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
         td.innerHTML = data[k].name;
         tr.appendChild(td);
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
         td.innerHTML = data[k].humanType;
         tr.appendChild(td);
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
         td.innerHTML = data[k].currencyType;
         tr.appendChild(td);
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
         td.innerHTML = data[k].txFee;
         tr.appendChild(td);
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
         td.innerHTML = data[k].minConf;
         tr.appendChild(td);
         tbl.appendChild(tr);
 
         td = document.createElement('td');
-        td.scope = "row";
-
-        but.innerHTML = "D";
+        but.innerHTML = "Delete";
         let butID = data[k].id
         but.addEventListener('click', function () {
             deleteCrypto(butID);
@@ -81,7 +73,6 @@ function drawInfo(data) {
         tbl.appendChild(tr);
     }
 }
-
 drawInfo();
 
 function deleteCrypto(id) {
