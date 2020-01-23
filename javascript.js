@@ -28,4 +28,5 @@ function drawInfo(data) {
 
     tbl.appendChild(tr);
 }
+
 drawInfo();
