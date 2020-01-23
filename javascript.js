@@ -79,7 +79,6 @@ function drawInfo(data) {
         td.appendChild(but);
         tr.appendChild(td);
         tbl.appendChild(tr);
-
     }
 }
 
@@ -92,3 +91,12 @@ function deleteCrypto(id) {
         tr.text('');
     });
 }
+
+$(document).ready(function(){
+    $("#myInput").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#tableID tbody tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
