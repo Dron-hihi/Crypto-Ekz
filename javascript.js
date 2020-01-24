@@ -39,6 +39,7 @@ function drawInfo(data) {
 
         td = document.createElement('td');
         td.innerHTML = data[k].name;
+        td.classList.add('nameSelector');
         tr.appendChild(td);
         tbl.appendChild(tr);
 
@@ -87,7 +88,7 @@ $(document).ready(function(){
     $("#myInput").on("keyup", function() {
       var value = $(this).val().toLowerCase();
       $("#tableID tbody tr").filter(function() {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        $(this).toggle($(this).children('.nameSelector').text().toLowerCase().indexOf(value) > -1)
       });
     });
   });
